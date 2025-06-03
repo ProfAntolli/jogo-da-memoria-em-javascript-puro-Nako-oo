@@ -19,7 +19,7 @@ h1 {
   width: 480px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Corrigido para 3 colunas */
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
