@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #1d1f2f;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.memory-game {
+  width: 480px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Corrigido para 3 colunas */
+  gap: 10px;
+}
+
+.memory-card {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.memory-card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.back-face {
+  background: #444;
+}
